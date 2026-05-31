@@ -1,0 +1,155 @@
+/* ==========================================================================
+   1. IMPORTAÇÃO DAS FONTES (Google Fonts)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* ==========================================================================
+   2. VARIÁVEIS GLOBAIS (Gabarito do Novo Guia de Estilo)
+   ========================================================================== */
+:root {
+    /* Cores Primárias */
+    --color-blue-500: hsl(215, 51%, 70%);
+    --color-cyan-400: hsl(178, 100%, 50%);
+
+    /* Cores Neutras */
+    --color-blue-950: hsl(217, 54%, 11%);
+    /* Fundo principal (main BG) */
+    --color-blue-900: hsl(216, 50%, 16%);
+    /* Fundo do card (card BG) */
+    --color-blue-800: hsl(215, 32%, 27%);
+    /* Linhas de divisão (line) */
+    --color-white: hsl(0, 0%, 100%);
+
+    /* Tipografia */
+    --font-family-body: 'Outfit', sans-serif;
+
+    /* Peso das Fontes */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-bold: 600;
+
+    /* Tamanho Padrão do Texto (Mudou para 18px neste projeto) */
+    --font-size-body: 18px;
+}
+
+/* ==========================================================================
+   3. RESET BÁSICO
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   4. ESTILIZAÇÃO DO BODY (Centralização com Flexbox)
+   ========================================================================== */
+body {
+    min-height: 100vh;
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-blue-500);
+    background-color: var(--color-blue-950);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    display: flex;
+    background-color: var(--color-blue-900);
+    height: 700px;
+    padding: 20px;
+    width: 375px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-blue-800);
+    height: 90%;
+    border-radius: 15px;
+}
+main img{
+    border-radius: 10px;
+}
+.image-card{
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.image-card > img{
+    display: block;
+    transition: transform 0.25s ease;
+}
+.image-overlay{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    cursor: pointer;
+}
+.image-overlay > img{
+    width: 48px;
+    height: 48px;
+}
+.image-card:hover .image-overlay,
+.image-card:active .image-overlay,
+.image-card:focus-within .image-overlay{
+    opacity: 1;
+}
+.image-card:hover > img,
+.image-card:active > img,
+.image-card:focus-within > img{
+    transform: scale(1.03);
+}
+.text{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0px 0px 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+}
+.text h3{
+    color: var(--color-white);
+}
+.text > p+p{
+    color: var(--color-cyan-400);
+
+}
+.text>p+p+p{
+    color: var(--font-size-body);
+    padding: 0px 20px 0px 0px;
+
+
+}
+.img-p{
+    display: flex;
+    gap: 10px;
+
+}
+.text h3:hover{
+    color: var(--color-cyan-400);
+    cursor: pointer;
+}
+.img-p>p>mark{
+    background-color: transparent;
+    color: var(--color-white);
+}
+.img-p>p>mark:hover{
+    color: var(--color-cyan-400);
+        cursor: pointer;
+}
