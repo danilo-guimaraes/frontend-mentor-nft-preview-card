@@ -7,6 +7,11 @@
 Component](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U)
 > do Frontend Mentor. Nível: **Newbie** · Stack: **HTML5 · CSS3**
 ---
+### Screenshot
+
+![Blog Preview Card Solution](preview.jpg)
+
+---
 ## ■ Demo ao vivo
 **[■ Acesse aqui](https://danilo-guimaraes.github.io/frontend-mentor-nft-preview-card/)**
 ---
